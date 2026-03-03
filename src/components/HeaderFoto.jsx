@@ -1,11 +1,11 @@
 import { View, Text, StyleSheet } from "react-native";
-import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-export default function Header() {
+export default function HeaderFoto() {
     return (
         <View style={styles.header}>
-            <MaterialCommunityIcons name="photograph" size={24} color="#fff" />
-            <Text style={styles.titulo}>Connecta</Text>
+            <MaterialCommunityIcons name="camera" size={28} color="#fff" />
+            <Text style={styles.titulo}>PhotoShare</Text>
         </View>
     );
 }
@@ -21,6 +21,7 @@ const styles = StyleSheet.create({
         borderBottomRightRadius: 30,
         flexDirection: 'row',
         alignItems: 'center',
+        justifyContent: 'center',
         elevation: 5,
         shadowColor: '#000',
         shadowOffset: { width: 0, height: 2 },
