@@ -1,14 +1,18 @@
 import { View, Text, StyleSheet } from 'react-native';
+import { Image } from 'expo-image';
 
-const CardUser = ({ nome, usuario, email, telefone, cor }) => {
-  const inicial = nome.charAt(0);
-
+const CardUser = ({ nome, email, telefone, cor, imagemUrl }) => {
   return (
     <View style={[styles.card, { borderLeftColor: cor }]}>
       <View style={[styles.fotoPerfil, { backgroundColor: cor }]}>
-        <Text style={styles.fotoTexto}>{inicial}</Text>
+        <Image
+          source={{ uri: imagemUrl }}
+          style={styles.fotoPerfilImagem}
+          contentFit="cover"
+          transition={200}
+          cachePolicy="memory-disk"
+        />
       </View>
-
       <View style={styles.infoContainer}>
         <Text style={styles.nome}>{nome}</Text>    
         <Text style={styles.email}>{email}</Text>
@@ -40,11 +44,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     marginRight: 15,
+    overflow: 'hidden',
   },
-  fotoTexto: {
-    color: '#fff',
-    fontSize: 28,
-    fontWeight: 'bold',
+  fotoPerfilImagem: {
+    width: '100%',
+    height: '100%',
   },
   infoContainer: {
     flex: 1,
@@ -53,11 +57,6 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: '600',
     color: '#2d3436',
-    marginBottom: 4,
-  },
-  usuario: {
-    fontSize: 14,
-    color: '#636e72',
     marginBottom: 4,
   },
   email: {
