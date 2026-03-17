@@ -1,37 +1,30 @@
-import { View, Text, StyleSheet } from "react-native";
-import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
+import {View, Text, StyleSheet} from 'react-native'
+import FontAwesome from '@expo/vector-icons/FontAwesome'
 
-export default function Header() {
+export default function Header(){
     return (
-        <View style={styles.header}>
-            <MaterialCommunityIcons name="photograph" size={24} color="#fff" />
-            <Text style={styles.titulo}>Connecta</Text>
+        <View style={styles.container}>
+            <FontAwesome style={styles.logo} name="users" size={26} color="#e7612b" />
+            <Text style={styles.logotipo}>Logo</Text>
         </View>
-    );
+    )
 }
 
-const styles = StyleSheet.create({
-    header: {
-        width: '100%',
-        backgroundColor: '#be9bf7', 
-        paddingTop: 60,
-        paddingBottom: 20,
-        paddingHorizontal: 20,
-        borderBottomLeftRadius: 30,
-        borderBottomRightRadius: 30,
-        flexDirection: 'row',
-        alignItems: 'center',
-        elevation: 5,
-        shadowColor: '#000',
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.1,
-        shadowRadius: 3,
+const styles = StyleSheet.create({ // CSS in JS
+    container: {
+        flexDirection: "row",
+        backgroundColor: "#000000",
+        width: "100%",
+        height: 46,
+        marginBottom: 16,
+        alignItems: "center",
+        paddingHorizontal: 16
+        //justifyContent: "center",
     },
-    titulo: {
-        fontSize: 24,
-        fontWeight: '600',
-        color: '#fff',
-        letterSpacing: 0.5,
-        marginLeft: 10,
+    logo:{
+        marginRight: 14
     },
-});
+    logotipo: {
+        color: "#FFF"
+    }
+})
