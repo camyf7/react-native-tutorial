@@ -12,6 +12,9 @@
 - Em quais pacotes encontro um componente de Imagem? Qual melhor para usarmos atualmente?
 - O que são propriedades de componentes?
 - O que são Hooks?
+- Pra que serve o use efects?
+- Diferença de objeto e array
+- Map
 
 Extra
 
